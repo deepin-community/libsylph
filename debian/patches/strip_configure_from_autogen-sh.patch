@@ -1,0 +1,23 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Fri, 9 Feb 2018 23:27:08 +0900
+Subject: strip configure exec from autogen.sh
+
+ It's better that configure would be executed with dh_auto_configure
+ since it passes some variables without any specifications.
+
+Author: Hideki Yamane <henrich@debian.org>
+---
+ autogen.sh | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/autogen.sh b/autogen.sh
+index 8f52ed7..1c2b648 100755
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -4,5 +4,4 @@ aclocal -I ac \
+   && libtoolize --force --copy \
+   && autoheader \
+   && automake --add-missing --foreign --copy \
+-  && autoconf \
+-  && ./configure $@
++  && autoconf 

@@ -1,0 +1,47 @@
+NEWS
+
+* 1.1.0 (stable)
+
+    * The bugfixes and minor feature improvements were merged from Sylpheed
+      trunk.
+      - procmime_parse_mime_parameter(): spaces around equals between name
+        and value of MIME parameters are allowed.
+      - procmime_scan_multipart_message(): the max recursion level were
+        increased.
+      - conv_encode_header(): several bugs were fixed.
+      - my_memmem(): the buffer overrun was fixed.
+      - pop.c: invalid APOP timestamp is checked for now (CVE-2007-1558).
+      - socket.c: the bug that caused busy loop when connection was immediately
+        refused was fixed.
+      - procmime_get_encoding_for_str()
+        extract_parenthesis_with_escape()
+        extract_quote_with_escape()
+        strsplit_csv()
+        uriencode_for_mailto(): new functions were added.
+
+* 1.0.0 (stable)
+
+    * The reference manuals were mostly completed.
+    * The libtool version was increased.
+
+* 1.0.0beta1 (beta)
+
+    * The reference manuals were added.
+    * The sample codes were added.
+    * The new APIs were added to prefs_common, account, and folder.
+    * Several bugs were fixed.
+
+* 0.3.0 (alpha)
+
+    * The initialization and cleanup API was implemented,
+    * The two new APIs were added.
+
+* 0.2.0 (alpha)
+
+    * The initialization and cleanup APIs were added.
+    * The codes are synched with Sylpheed trunk.
+    * The sample codes are updated.
+
+* 0.1.0 (alpha)
+
+    * Initial release of LibSylph.

@@ -1,0 +1,22 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Fri, 9 Feb 2018 23:27:08 +0900
+Subject: glib-single-include
+
+===================================================================
+---
+ libsylph/defs.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libsylph/defs.h b/libsylph/defs.h
+index 973242a..d113d41 100644
+--- a/libsylph/defs.h
++++ b/libsylph/defs.h
+@@ -24,7 +24,7 @@
+ #  include "config.h"
+ #endif
+ 
+-#include <glibconfig.h>
++#include <glib.h>
+ 
+ #ifdef G_OS_WIN32
+ #  include <glib/gwin32.h>

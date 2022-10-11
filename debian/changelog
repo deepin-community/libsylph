@@ -1,0 +1,243 @@
+libsylph (1.1.0-21) unstable; urgency=medium
+
+  * debian/control
+    - Drop debhelper and use -compat (= 13)
+    - Set Standards-Version: 4.6.0
+  * debian/libsylph1.install
+    - Install localization messages
+  * Add debian/not-installed for .la file
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 21 Aug 2021 09:33:43 +0900
+
+libsylph (1.1.0-20) unstable; urgency=medium
+
+  * drop debian/.gitlab-ci.yml and add debian/salsa-ci.yml for exec CI
+    on salsa.debian.org
+  * debian/control
+    - set Standards-Version: 4.4.0
+    - use dh12
+    - use https for Homepage:
+    - add Rules-Requires-Root: no
+  * debian/copyright
+    - use https
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 31 Aug 2019 23:22:05 +0900
+
+libsylph (1.1.0-19) unstable; urgency=medium
+
+  * debian/patches
+    - add 0005-use-oniguruma-without-onig-config.patch (Closes: #889662)
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 09 Feb 2018 23:32:14 +0900
+
+libsylph (1.1.0-18) unstable; urgency=medium
+
+  * debian/control
+    - move Vcs-* to salsa.debian.org
+    - set Standards-Version: 4.1.3
+    - set Build-Depends: debhelper (>= 11)
+  * debian/compat
+    - set 11
+  * debian/watch
+    - add pgpsigurlmangle to check PGP signature
+  * debian/upstream
+    - add signing-key.asc for above
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 04 Feb 2018 10:30:51 +0900
+
+libsylph (1.1.0-17) unstable; urgency=medium
+
+  * debian/control
+    - set Priority: optional 
+    - set Standards-Version: 4.1.1
+    - set Build-Depends: debhelper (>= 10) and drop autoreconf related packages
+  * debian/compat
+    - set 10
+  * debian/watch
+    - update upstream URL to use https, and convert to version 4
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 21 Oct 2017 08:38:37 +0900
+
+libsylph (1.1.0-16) unstable; urgency=medium
+
+  * debian/control
+    - add HAYASHI Kentaro <hayashi@clear-code.com> for Uploaders as upstream.
+      Welcome!
+    - set Standards-Version: 3.9.7 with no changes
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 31 Mar 2016 19:35:58 +0900
+
+libsylph (1.1.0-15) unstable; urgency=medium
+
+  * debian/control
+    - update Vcs-* 
+    - set Standards-Version: 3.9.6
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 14 Dec 2015 06:43:16 +0900
+
+libsylph (1.1.0-14) unstable; urgency=medium
+
+  * debian/patches
+    - add 0004-fix-Missing-gfree-in-mh_get_mtime.patch
+      Thanks to Insu Yun <wuninsu@gmail.com> 
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 23 Nov 2015 10:49:24 +0900
+
+libsylph (1.1.0-13) unstable; urgency=low
+
+  * debian/control
+    - add Vcs-* field 
+
+ -- Hideki Yamane <henrich@debian.org>  Fri, 12 Jul 2013 11:02:38 +0900
+
+libsylph (1.1.0-12) unstable; urgency=low
+
+  * debian/rules
+    - use autotools-dev
+  * debian/control
+    - set "Standards-Version: 3.9.4" 
+  * debian/rules
+    - strip -pie from hardening
+  * debian/patches
+    - add "strip_configure_from_autogen-sh.patch", since "--enable-oniguruma"
+      option was specified for configure but it was executed in autogen.sh.
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 13 Jan 2013 23:41:51 +0900
+
+libsylph (1.1.0-11) unstable; urgency=low
+
+  * debian/rules
+    - delete override_dh_compress lines since Makefile.in is not included
+      anymore
+  * debian/patches/exclude_examples-directory
+    - rename to delete_Makefile_from_example
+  * debian/patches/delete_Makefile_from_example: remove all Makefile*
+    from examples directory 
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 07 Oct 2012 08:45:14 +0900
+
+libsylph (1.1.0-10) unstable; urgency=low
+
+  * debian/patches/exclude_examples-directory: exclude examples
+    directory not to output Makefile (Closes: #675105).
+  * debian/control
+    - add "Build-Depends: autoconf, automake, libtool" to be enable to apply
+      above patch
+  * debian/rules
+    - remove parallel build
+    - enable oniguruma support
+    - not compress Makefile.in
+    - regenerate configure file to apply changes in exclude_examples-directory
+      patch
+  * debian/copyright
+    - convert to Machine-readable debian/copyright file. 
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 07 Oct 2012 00:05:49 +0900
+
+libsylph (1.1.0-9) UNRELEASED; urgency=low
+
+  * debian/rules
+    - enable parallel build 
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 30 Jun 2012 09:29:12 +0900
+
+libsylph (1.1.0-8) unstable; urgency=low
+
+  * debian/rules
+    - convert to dh style
+    - set "export DEB_BUILD_MAINT_OPTIONS = hardening=+all,-pie" since
+      avoid to build failure.
+  * debian/libsylph-dev.examples
+    - move from rules
+  * debian/control
+    - set "Build-Depends: debhelper (>= 9)"
+    - add "Pre-Depends: ${misc:Pre-Depends}" for Multi-Arch.
+    - add "Multi-Arch: same"
+  * debian/compat
+    - set 9
+  * debian/libsylph{,-dev}.install
+    - deal with Multi-Arch.
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 29 May 2012 10:40:29 +0900
+
+libsylph (1.1.0-7) unstable; urgency=low
+
+  * debian/source/format
+    - set "3.0 (quilt) 
+  * debian/patches
+    - add glib-single-include.patch to be enable to build with newer glib
+      library (Closes: #665575)  Thanks to biebl@debian.org
+  * debian/control
+    - set "Standards-Version: 3.9.3" with no change
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 28 Mar 2012 07:20:00 +0900
+
+libsylph (1.1.0-6) unstable; urgency=low
+
+  * debian/rules
+    - fix "debian-rules-missing-recommended-target" lintian warning
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 17 Sep 2011 14:37:49 +0900
+
+libsylph (1.1.0-5) unstable; urgency=low
+
+  * debian/control:
+    - change my address, remove DM stuff
+    - bump up "Standards-Version: 3.9.2"
+  * fix "Please stop installing libtool la-file in dev-package (Policy 10.2)"
+    Thanks to Andreas Moog <amoog@ubuntu.com> (Closes: #621546) 
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 23 Apr 2011 19:08:57 +0900
+
+libsylph (1.1.0-4) unstable; urgency=low
+
+  * debian/control:
+    - bump up Standards-Version: 3.8.3
+    - add "Depends: ${misc:Depends}" to each packages
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 31 Dec 2009 19:13:21 +0900
+
+libsylph (1.1.0-3) unstable; urgency=low
+
+  * debian/control
+    - fix "missing-separator-between-items in build-depends field between '\'
+       and 'libonig-dev'"
+    - bump up Standards-Version: 3.8.2 
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Wed, 24 Jun 2009 22:24:02 +0900
+
+libsylph (1.1.0-2) unstable; urgency=low
+
+  * debian/control
+    - fix "binary-control-field-duplicates-source"
+    - fix "extended-description-is-probably-too-short"
+    - add "DM-Upload-allowed: yes", because I'm Debian Maintainer :)
+    - bump up Standards-Version: 3.8.0
+  * debian/copyright
+    - fix "copyright-with-old-dh-make-debian-copyright"
+  * add debian/libsylph1.symbols
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Mon, 09 Mar 2009 18:29:19 +0900
+
+libsylph (1.1.0-1) unstable; urgency=high
+
+  * New upstream release
+  * backport from Sylpheed trunk
+    - check invalid APOP timestamp (CVE-2007-1558)
+    - fix busy loop bug in socket.c
+    - fix some bugs in conv_encode_header() 
+    - fix buffer overrun in my_memmem()
+    - adapt procmime_scan_multipart_message() and 
+      procmime_parse_mime_parameter() 
+    - add some functions
+      procmime_get_encoding_for_str(), extract_parenthesis_with_escape()
+      extract_quote_with_escape(), strsplit_csv() and uriencode_for_mailto()
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Mon, 25 Feb 2008 21:41:33 +0900
+
+libsylph (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #390546).
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Mon, 28 Jan 2008 21:45:44 +0900
+

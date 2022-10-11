@@ -1,0 +1,5 @@
+glib-single-include.patch
+delete_Makefile_from_example
+strip_configure_from_autogen-sh.patch
+0004-fix-Missing-gfree-in-mh_get_mtime.patch
+0005-use-oniguruma-without-onig-config.patch

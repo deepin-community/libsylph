@@ -1,0 +1,28 @@
+From: Hideki Yamane <henrich@debian.org>
+Date: Mon, 23 Nov 2015 10:45:18 +0900
+Subject: fix Missing gfree in mh_get_mtime()
+
+patch from Insu Yun <wuninsu@gmail.com>
+---
+ libsylph/mh.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/libsylph/mh.c b/libsylph/mh.c
+index 7a97f4a..e1b36ba 100644
+--- a/libsylph/mh.c
++++ b/libsylph/mh.c
+@@ -1205,9 +1205,13 @@ static time_t mh_get_mtime(FolderItem *item)
+ {
+ 	gchar *path;
+ 	struct stat s;
++	int result;
+ 
+ 	path = folder_item_get_path(item);
+-	if (g_stat(path, &s) < 0) {
++        result = g_stat(path, &s);
++        g_free(path);
++
++        if (result < 0) {
+ 		FILE_OP_ERROR(path, "stat");
+ 		return -1;
+ 	} else {

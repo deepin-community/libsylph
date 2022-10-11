@@ -1,0 +1,182 @@
+2008-02-25
+
+	* version 1.1.0
+
+2008-02-15
+
+	* libsylph/socket.c:
+	  sock_connect_async_cb()
+	  sock_connect_address_list_async(): also watch for G_IO_ERR and
+	  G_IO_HUP (fixes busy loop when connection is immediately refused).
+
+2007-12-27
+
+	* libsylph/recv.c: merged from trunk.
+
+2007-12-27
+
+	* libsylph/pop.c: merged from trunk.
+	* libsylph/pop.c:
+	  pop3_getauth_apop_send()
+	  pop3_session_recv_msg(): check for invalid APOP timestamp
+	  (CVE-2007-1558), and check for the functions' return value.
+
+2007-12-27
+
+	* libsylph/utils.[ch]: merged from trunk (except for In-Reply-To).
+	* libsylph/utils.[ch]:
+	  extract_parenthesis_with_escape()
+	  extract_quote_with_escape()
+	  strsplit_csv()
+	  uriencode_for_mailto(): added.
+
+2007-12-27
+
+	* libsylph/codeconv.[ch]: merged from trunk.
+	* libsylph/utils.c
+	  libsylph/codeconv.c: conv_encode_header(): handle quote correctly
+	  (fixes stray quote character appearing after encoding mail headers).
+	* libsylph/codeconv.c: conv_encode_header(): force output of UTF-8
+	  if code conversion failed.
+	* libsylph/codeconv.c: conv_encode_header(): fixed wrong handling
+	  of quotation in continuing multi-byte strings.
+	* libsylph/codeconv.c: conv_get_current_locale(): fixed the case
+	  when cur_locale = "" (thanks to Elohin Igor').
+	* libsylph/codeconv.c: conv_encode_header(): use outgoing encoding
+	  to determine B or Q encoding instead of MB_CUR_MAX.
+
+2007-12-27
+
+	* libsylph/compose.c
+	  libsylph/sylmain.c: removed warnings.
+
+2007-12-25
+
+	* libsylph/sylmain.c: MAKE_DIR_IF_NOT_EXIST(): fixed a bug that
+	  the macro always failed if directory already exist.
+
+2007-11-08
+
+	* libsylph/procmime.c: procmime_parse_mime_parameter(): allow spaces
+	  around equals between name and value of MIME parameters.
+	* libsylph/procmime.c: procmime_scan_multipart_message(): use heap
+	  memory instead of stack for read buffer, and increased the max
+	  recursion level to 64.
+	* libsylph/procmime.[ch]: procmime_get_encoding_for_str(): added.
+
+2006-11-29
+
+	* README
+	  README.ja: updated.
+
+2006-11-28
+
+	* doc/*: completed reference manuals.
+
+2006-11-27
+
+	* libsylph/uuencode.h: fixed the prototype of touufrombits().
+
+2006-11-22
+
+	* version 1.0.0beta1
+
+2006-11-22
+
+	* examples/libsylph-pop.c: added.
+
+2006-11-21
+
+	* examples/libsylph-send.c
+	  examples/README
+	  examples/README.ja
+	  doc/README.ja: added.
+
+2006-11-21
+
+	* libsylph/utils.c: my_tmpfile(): guard against unset progname.
+	* libsylph/session.c: check whether notify callback is set.
+	* libsylph/smtp.h
+	  libsylph/session.h
+	  libsylph/socket.h: fixed the offset of struct members independent
+	  from configuration.
+
+2006-11-20
+
+	* README
+	  README.ja
+	  INSTALL
+	  INSTALL.ja: updated.
+
+2006-11-20
+
+	* configure.in: modified libtool version.
+	* examples/libsylph-createmailbox.c: added.
+
+2006-11-20
+
+	* libsylph/folder.[ch]: added folder_scan_tree() and
+	  folder_create_tree().
+
+2006-11-20
+
+	* libsylph/prefs_common.[ch]: added prefs_common_get().
+	* libsylph/filter.h: modified the prototype of filter_cond_new().
+	* libsylph/account.[ch]: added account_get_current_account().
+	* libsylph/mbox.c: use account_get_current_account().
+	* libsylph/procmime.[ch]: removed unused procmime_mimeinfo_replace().
+
+2006-11-02
+
+	* doc/*: added reference manuals.
+
+2006-10-13
+
+	* libsylph/sylmain.c: syl_setup_rc_dir(): don't exit().
+
+2006-10-06
+
+	* version 0.3.0
+
+2006-10-06
+
+	* libsylph/sylmain.[ch]: fixed linking problem.
+	  syl_setup_rc_dir(): Return -1 if error occurred.
+	* examples/libsylph-template.c: added template source.
+
+2006-10-04
+
+	* libsylph/*: synched with sylpheed-trunk.
+	* libsylph/sylmain.[ch]: implemented syl_main(), syl_cleanup().
+	  syl_setup_rc_dir(), syl_save_all_state(): added.
+
+2006-09-28
+
+	* version 0.2.0
+
+2006-09-25
+
+	* examples/*: updated.
+
+2006-09-25
+
+	* libsylph/sylmain.[ch]: new initialization and cleanup API.
+
+2006-09-22
+
+	* version 0.1.0: first alpha release.
+
+2006-09-22
+
+	* example/libsylph-listprefs.c: new sample for PrefsCommon.
+
+2006-09-19
+
+	* example: new directory for sample programs.
+	* example/libsylph-listsummary.c
+	  example/libsylph-listfolder.c
+	  example/libsylph-compose.c: new samples.
+
+2006-09-11
+
+	* libsylph/compose.[ch]: new message composition API.

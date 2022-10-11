@@ -1,0 +1,49 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libsylph
+Upstream-Contact: Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>
+Source: https://sylpheed.sraoss.jp/ja/download.html
+
+Files: *
+Copyright: 2007-2012 Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>
+License: LGPL-2.1
+
+Files: examples/libsylph-*
+Copyright: 2007-2012 Hiroyuki Yamamoto <hiro-y@kcn.ne.jp>
+License: public-domain
+
+Files: debian/*
+Copyright: 2007-2012 Hideki Yamane <henrich@debian.org>
+License: LGPL-2.1
+
+License: LGPL-2.1
+ This package is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License can be found in `/usr/share/common-licenses/LGPL-2.1'.
+
+License: public-domain
+ Several sample programs are included in this directory.
+ Sylpheed configuration is needed for most examples in advance.
+ .
+ The license of these sample programs is public domain.
+ .
+ libsylph-compose.c: compose message
+ libsylph-createmailbox.c: creates mailbox
+ libsylph-listfolder.c: list all folders
+ libsylph-listprefs.c: list all common preferences
+ libsylph-listsummary.c: list message summary of a specified folder
+ libsylph-pop.c: receive messages from POP3 server
+ libsylph-send.c: send message via SMTP server
+ libsylph-template.c: source template

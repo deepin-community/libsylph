@@ -1,0 +1,500 @@
+# Makefile.in generated automatically by automake 1.4-p6 from Makefile.am
+
+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+DESTDIR =
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = ..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+transform = @program_transform_name@
+
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+build_alias = @build_alias@
+build_triplet = @build@
+host_alias = @host_alias@
+host_triplet = @host@
+target_alias = @target_alias@
+target_triplet = @target@
+AR = @AR@
+AS = @AS@
+BUILD_REVISION = @BUILD_REVISION@
+CATALOGS = @CATALOGS@
+CATOBJEXT = @CATOBJEXT@
+CC = @CC@
+CPP = @CPP@
+CXX = @CXX@
+CXXCPP = @CXXCPP@
+DATADIRNAME = @DATADIRNAME@
+DLLTOOL = @DLLTOOL@
+ECHO = @ECHO@
+EGREP = @EGREP@
+EXEEXT = @EXEEXT@
+F77 = @F77@
+GCJ = @GCJ@
+GCJFLAGS = @GCJFLAGS@
+GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
+GLIB_CFLAGS = @GLIB_CFLAGS@
+GLIB_GENMARSHAL = @GLIB_GENMARSHAL@
+GLIB_LIBS = @GLIB_LIBS@
+GLIB_MKENUMS = @GLIB_MKENUMS@
+GMOFILES = @GMOFILES@
+GMSGFMT = @GMSGFMT@
+GOBJECT_QUERY = @GOBJECT_QUERY@
+HAVE_LIB = @HAVE_LIB@
+INSTOBJEXT = @INSTOBJEXT@
+INTLLIBS = @INTLLIBS@
+LEX = @LEX@
+LIB = @LIB@
+LIBICONV = @LIBICONV@
+LIBTOOL = @LIBTOOL@
+LN_S = @LN_S@
+LTLIB = @LTLIB@
+LTLIBICONV = @LTLIBICONV@
+LT_AGE = @LT_AGE@
+LT_CURRENT = @LT_CURRENT@
+LT_RELEASE = @LT_RELEASE@
+LT_REVISION = @LT_REVISION@
+MAINT = @MAINT@
+MAJOR_VERSION = @MAJOR_VERSION@
+MAKEINFO = @MAKEINFO@
+MICRO_VERSION = @MICRO_VERSION@
+MINOR_VERSION = @MINOR_VERSION@
+MKINSTALLDIRS = @MKINSTALLDIRS@
+MSGFMT_OPTS = @MSGFMT_OPTS@
+OBJDUMP = @OBJDUMP@
+OBJEXT = @OBJEXT@
+PACKAGE = @PACKAGE@
+PKG_CONFIG = @PKG_CONFIG@
+POFILES = @POFILES@
+POSUB = @POSUB@
+PO_IN_DATADIR_FALSE = @PO_IN_DATADIR_FALSE@
+PO_IN_DATADIR_TRUE = @PO_IN_DATADIR_TRUE@
+RANLIB = @RANLIB@
+RC = @RC@
+STRIP = @STRIP@
+USE_NLS = @USE_NLS@
+VERSION = @VERSION@
+WINDRES = @WINDRES@
+YACC = @YACC@
+localedir = @localedir@
+
+AM_CPPFLAGS =  	-DG_LOG_DOMAIN=\"LibSylph\" 	-DSYSCONFDIR=\""$(sysconfdir)"\" 	-DLOCALEDIR=\""$(localedir)"\"
+
+
+INCLUDES = $(GLIB_CFLAGS) -I$(top_srcdir) -I$(includedir)
+
+lib_LTLIBRARIES = libsylph.la
+#noinst_LTLIBRARIES = libsylph.la
+
+libsylph_la_SOURCES =  	account.c 	base64.c 	codeconv.c 	compose.c 	customheader.c 	displayheader.c 	filter.c 	folder.c 	html.c 	imap.c 	mbox.c 	md5.c 	md5_hmac.c 	mh.c 	news.c 	nntp.c 	pop.c 	prefs.c 	prefs_account.c 	prefs_common.c 	procheader.c 	procmime.c 	procmsg.c 	quoted-printable.c 	recv.c 	session.c 	smtp.c 	socket.c 	ssl.c 	stringtable.c 	sylmain.c 	unmime.c 	utils.c 	uuencode.c 	virtual.c 	xml.c
+
+
+libsylphincludedir = $(includedir)/sylph
+libsylphinclude_HEADERS =  	defs.h 	enums.h 	account.h 	base64.h 	codeconv.h 	compose.h 	customheader.h 	displayheader.h 	filter.h 	folder.h 	html.h 	imap.h 	mbox.h 	md5.h 	md5_hmac.h 	mh.h 	news.h 	nntp.h 	pop.h 	prefs.h 	prefs_account.h 	prefs_common.h 	procheader.h 	procmime.h 	procmsg.h 	quoted-printable.h 	recv.h 	session.h 	smtp.h 	socket.h 	ssl.h 	stringtable.h 	sylmain.h 	unmime.h 	utils.h 	uuencode.h 	virtual.h 	xml.h
+
+
+@OS_WIN32_TRUE@no_undefined = -no-undefined
+@OS_WIN32_TRUE@export_symbols = -export-symbols libsylph.def
+
+libsylph_la_LDFLAGS =  	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) 	-export-dynamic $(no_undefined) $(export_symbols)
+
+
+libsylph_la_LIBADD = $(GLIB_LIBS)
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_HEADER = ../config.h
+CONFIG_CLEAN_FILES = 
+LTLIBRARIES =  $(lib_LTLIBRARIES)
+
+
+DEFS = @DEFS@ -I. -I$(srcdir) -I..
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+libsylph_la_DEPENDENCIES = 
+libsylph_la_OBJECTS =  account.lo base64.lo codeconv.lo compose.lo \
+customheader.lo displayheader.lo filter.lo folder.lo html.lo imap.lo \
+mbox.lo md5.lo md5_hmac.lo mh.lo news.lo nntp.lo pop.lo prefs.lo \
+prefs_account.lo prefs_common.lo procheader.lo procmime.lo procmsg.lo \
+quoted-printable.lo recv.lo session.lo smtp.lo socket.lo ssl.lo \
+stringtable.lo sylmain.lo unmime.lo utils.lo uuencode.lo virtual.lo \
+xml.lo
+CFLAGS = @CFLAGS@
+COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+LTCOMPILE = $(LIBTOOL) --mode=compile $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+CCLD = $(CC)
+LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+HEADERS =  $(libsylphinclude_HEADERS)
+
+DIST_COMMON =  Makefile.am Makefile.in
+
+
+DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+
+TAR = tar
+GZIP_ENV = --best
+SOURCES = $(libsylph_la_SOURCES)
+OBJECTS = $(libsylph_la_OBJECTS)
+
+all: all-redirect
+.SUFFIXES:
+.SUFFIXES: .S .c .lo .o .obj .s
+$(srcdir)/Makefile.in: @MAINTAINER_MODE_TRUE@ Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+	cd $(top_srcdir) && $(AUTOMAKE) --foreign --include-deps libsylph/Makefile
+
+Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) \
+	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+
+mostlyclean-libLTLIBRARIES:
+
+clean-libLTLIBRARIES:
+	-test -z "$(lib_LTLIBRARIES)" || rm -f $(lib_LTLIBRARIES)
+
+distclean-libLTLIBRARIES:
+
+maintainer-clean-libLTLIBRARIES:
+
+install-libLTLIBRARIES: $(lib_LTLIBRARIES)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(libdir)
+	@list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo "$(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p"; \
+	    $(LIBTOOL)  --mode=install $(INSTALL) $$p $(DESTDIR)$(libdir)/$$p; \
+	  else :; fi; \
+	done
+
+uninstall-libLTLIBRARIES:
+	@$(NORMAL_UNINSTALL)
+	list='$(lib_LTLIBRARIES)'; for p in $$list; do \
+	  $(LIBTOOL)  --mode=uninstall rm -f $(DESTDIR)$(libdir)/$$p; \
+	done
+
+.c.o:
+	$(COMPILE) -c $<
+
+# FIXME: We should only use cygpath when building on Windows,
+# and only if it is available.
+.c.obj:
+	$(COMPILE) -c `cygpath -w $<`
+
+.s.o:
+	$(COMPILE) -c $<
+
+.S.o:
+	$(COMPILE) -c $<
+
+mostlyclean-compile:
+	-rm -f *.o core *.core
+	-rm -f *.$(OBJEXT)
+
+clean-compile:
+
+distclean-compile:
+	-rm -f *.tab.c
+
+maintainer-clean-compile:
+
+.c.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.s.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+.S.lo:
+	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+
+mostlyclean-libtool:
+	-rm -f *.lo
+
+clean-libtool:
+	-rm -rf .libs _libs
+
+distclean-libtool:
+
+maintainer-clean-libtool:
+
+libsylph.la: $(libsylph_la_OBJECTS) $(libsylph_la_DEPENDENCIES)
+	$(LINK) -rpath $(libdir) $(libsylph_la_LDFLAGS) $(libsylph_la_OBJECTS) $(libsylph_la_LIBADD) $(LIBS)
+
+install-libsylphincludeHEADERS: $(libsylphinclude_HEADERS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(libsylphincludedir)
+	@list='$(libsylphinclude_HEADERS)'; for p in $$list; do \
+	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(libsylphincludedir)/$$p"; \
+	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(libsylphincludedir)/$$p; \
+	done
+
+uninstall-libsylphincludeHEADERS:
+	@$(NORMAL_UNINSTALL)
+	list='$(libsylphinclude_HEADERS)'; for p in $$list; do \
+	  rm -f $(DESTDIR)$(libsylphincludedir)/$$p; \
+	done
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP)
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	here=`pwd` && cd $(srcdir) \
+	  && mkid -f$$here/ID $$unique $(LISP)
+
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	  || (cd $(srcdir) && etags -o $$here/TAGS $(ETAGS_ARGS) $$tags  $$unique $(LISP))
+
+mostlyclean-tags:
+
+clean-tags:
+
+distclean-tags:
+	-rm -f TAGS ID
+
+maintainer-clean-tags:
+
+distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+
+subdir = libsylph
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	  d=$(srcdir); \
+	  if test -d $$d/$$file; then \
+	    cp -pr $$d/$$file $(distdir)/$$file; \
+	  else \
+	    test -f $(distdir)/$$file \
+	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+	  fi; \
+	done
+account.lo account.o : account.c ../config.h defs.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h account.h procheader.h
+base64.lo base64.o : base64.c base64.h
+codeconv.lo codeconv.o : codeconv.c ../config.h defs.h codeconv.h \
+	prefs_common.h enums.h prefs.h unmime.h base64.h \
+	quoted-printable.h utils.h
+compose.lo compose.o : compose.c ../config.h defs.h compose.h procmsg.h \
+	folder.h prefs_account.h smtp.h session.h socket.h ssl.h \
+	prefs.h procmime.h utils.h codeconv.h imap.h news.h \
+	customheader.h prefs_common.h enums.h account.h procheader.h \
+	base64.h quoted-printable.h filter.h
+customheader.lo customheader.o : customheader.c ../config.h defs.h \
+	customheader.h prefs_account.h folder.h session.h socket.h \
+	ssl.h procmsg.h procmime.h utils.h smtp.h prefs.h
+displayheader.lo displayheader.o : displayheader.c ../config.h \
+	displayheader.h
+filter.lo filter.o : filter.c ../config.h defs.h filter.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h procheader.h xml.h prefs_common.h \
+	enums.h account.h
+folder.lo folder.o : folder.c ../config.h defs.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h imap.h news.h mh.h virtual.h xml.h \
+	codeconv.h account.h
+html.lo html.o : html.c html.h codeconv.h ../config.h utils.h
+imap.lo imap.o : imap.c ../config.h defs.h imap.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h recv.h procheader.h codeconv.h \
+	md5_hmac.h base64.h prefs_common.h enums.h virtual.h
+mbox.lo mbox.o : mbox.c ../config.h defs.h mbox.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h filter.h prefs_common.h enums.h \
+	account.h
+md5.lo md5.o : md5.c md5.h
+md5_hmac.lo md5_hmac.o : md5_hmac.c ../config.h md5.h md5_hmac.h
+mh.lo mh.o : mh.c ../config.h defs.h folder.h prefs_account.h smtp.h \
+	session.h socket.h ssl.h prefs.h procmsg.h procmime.h utils.h \
+	mh.h procheader.h prefs_common.h enums.h
+news.lo news.o : news.c ../config.h defs.h news.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h nntp.h recv.h procheader.h \
+	codeconv.h prefs_common.h enums.h
+nntp.lo nntp.o : nntp.c ../config.h nntp.h session.h socket.h ssl.h \
+	utils.h
+pop.lo pop.o : pop.c ../config.h defs.h pop.h session.h socket.h ssl.h \
+	prefs_account.h folder.h procmsg.h procmime.h utils.h smtp.h \
+	prefs.h md5.h recv.h
+prefs.lo prefs.o : prefs.c ../config.h prefs.h codeconv.h utils.h
+prefs_account.lo prefs_account.o : prefs_account.c ../config.h defs.h \
+	prefs.h prefs_account.h folder.h session.h socket.h ssl.h \
+	procmsg.h procmime.h utils.h smtp.h customheader.h account.h
+prefs_common.lo prefs_common.o : prefs_common.c ../config.h defs.h \
+	prefs.h prefs_common.h enums.h filter.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h procmsg.h \
+	procmime.h utils.h codeconv.h
+procheader.lo procheader.o : procheader.c ../config.h procheader.h \
+	procmsg.h folder.h prefs_account.h smtp.h session.h socket.h \
+	ssl.h prefs.h procmime.h utils.h codeconv.h displayheader.h \
+	prefs_common.h enums.h
+procmime.lo procmime.o : procmime.c ../config.h defs.h procmime.h \
+	procmsg.h folder.h prefs_account.h smtp.h session.h socket.h \
+	ssl.h prefs.h utils.h procheader.h base64.h quoted-printable.h \
+	uuencode.h html.h codeconv.h prefs_common.h enums.h
+procmsg.lo procmsg.o : procmsg.c defs.h ../config.h utils.h procmsg.h \
+	folder.h prefs_account.h smtp.h session.h socket.h ssl.h \
+	prefs.h procmime.h procheader.h account.h prefs_common.h \
+	enums.h codeconv.h
+quoted-printable.lo quoted-printable.o : quoted-printable.c
+recv.lo recv.o : recv.c ../config.h defs.h recv.h socket.h ssl.h utils.h
+session.lo session.o : session.c ../config.h defs.h session.h socket.h \
+	ssl.h utils.h
+smtp.lo smtp.o : smtp.c ../config.h smtp.h session.h socket.h ssl.h \
+	md5_hmac.h base64.h utils.h
+socket.lo socket.o : socket.c ../config.h socket.h ssl.h utils.h
+ssl.lo ssl.o : ssl.c ../config.h defs.h utils.h ssl.h socket.h
+stringtable.lo stringtable.o : stringtable.c stringtable.h utils.h \
+	../config.h
+sylmain.lo sylmain.o : sylmain.c ../config.h defs.h sylmain.h \
+	prefs_common.h enums.h prefs.h account.h prefs_account.h \
+	folder.h session.h socket.h ssl.h procmsg.h procmime.h utils.h \
+	smtp.h filter.h codeconv.h
+unmime.lo unmime.o : unmime.c ../config.h codeconv.h base64.h \
+	quoted-printable.h
+utils.lo utils.o : utils.c ../config.h defs.h utils.h socket.h ssl.h
+uuencode.lo uuencode.o : uuencode.c
+virtual.lo virtual.o : virtual.c ../config.h defs.h folder.h \
+	prefs_account.h smtp.h session.h socket.h ssl.h prefs.h \
+	procmsg.h procmime.h utils.h virtual.h mh.h procheader.h \
+	filter.h
+xml.lo xml.o : xml.c xml.h utils.h ../config.h codeconv.h stringtable.h
+
+info-am:
+info: info-am
+dvi-am:
+dvi: dvi-am
+check-am: all-am
+check: check-am
+installcheck-am:
+installcheck: installcheck-am
+install-exec-am: install-libLTLIBRARIES
+install-exec: install-exec-am
+
+install-data-am: install-libsylphincludeHEADERS
+install-data: install-data-am
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+install: install-am
+uninstall-am: uninstall-libLTLIBRARIES uninstall-libsylphincludeHEADERS
+uninstall: uninstall-am
+all-am: Makefile $(LTLIBRARIES) $(HEADERS)
+all-redirect: all-am
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+installdirs:
+	$(mkinstalldirs)  $(DESTDIR)$(libdir) $(DESTDIR)$(libsylphincludedir)
+
+
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+
+maintainer-clean-generic:
+mostlyclean-am:  mostlyclean-libLTLIBRARIES mostlyclean-compile \
+		mostlyclean-libtool mostlyclean-tags \
+		mostlyclean-generic
+
+mostlyclean: mostlyclean-am
+
+clean-am:  clean-libLTLIBRARIES clean-compile clean-libtool clean-tags \
+		clean-generic mostlyclean-am
+
+clean: clean-am
+
+distclean-am:  distclean-libLTLIBRARIES distclean-compile \
+		distclean-libtool distclean-tags distclean-generic \
+		clean-am
+	-rm -f libtool
+
+distclean: distclean-am
+
+maintainer-clean-am:  maintainer-clean-libLTLIBRARIES \
+		maintainer-clean-compile maintainer-clean-libtool \
+		maintainer-clean-tags maintainer-clean-generic \
+		distclean-am
+	@echo "This command is intended for maintainers to use;"
+	@echo "it deletes files that may require special tools to rebuild."
+
+maintainer-clean: maintainer-clean-am
+
+.PHONY: mostlyclean-libLTLIBRARIES distclean-libLTLIBRARIES \
+clean-libLTLIBRARIES maintainer-clean-libLTLIBRARIES \
+uninstall-libLTLIBRARIES install-libLTLIBRARIES mostlyclean-compile \
+distclean-compile clean-compile maintainer-clean-compile \
+mostlyclean-libtool distclean-libtool clean-libtool \
+maintainer-clean-libtool uninstall-libsylphincludeHEADERS \
+install-libsylphincludeHEADERS tags mostlyclean-tags distclean-tags \
+clean-tags maintainer-clean-tags distdir info-am info dvi-am dvi check \
+check-am installcheck-am installcheck install-exec-am install-exec \
+install-data-am install-data install-am install uninstall-am uninstall \
+all-redirect all-am all installdirs mostlyclean-generic \
+distclean-generic clean-generic maintainer-clean-generic clean \
+mostlyclean distclean maintainer-clean
+
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:
